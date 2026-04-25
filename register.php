@@ -17,7 +17,7 @@ if (isset($_POST['register'])) {
     }
 }
 
-include "Layout/register.html"; 
+include "index.html"; 
 
 
 ?>

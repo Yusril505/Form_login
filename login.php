@@ -24,6 +24,6 @@ if (isset($_POST['login'])) {
     }
 }
 
-include "Layout/login.html"
+include "index.html";
 ?>
 
