@@ -1,8 +1,8 @@
 <?php
 $hostname = "localhost";
 $username = "root";
-$password = "yaudahbanh"; // Pastikan password ini sesuai dengan settingan MySQL kamu
-$database_name = "Login";
+$password = "1";
+$database_name = "login";
 
 $db = mysqli_connect($hostname, $username, $password, $database_name);
 

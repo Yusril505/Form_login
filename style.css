@@ -11,44 +11,63 @@ body{
 .mobile{
     width: 100%;
     max-width: 100%;
+        border: 1px #9f9fb1;
+
+
 
 
 }
-.container{
+.container1{
     position: relative;
-    width: 90%;
+    width: 100%;
     height: 550px;
     overflow: hidden;
+    border: 1px solid #9f9fb1;
 
 }
 .form-box{
     position: absolute;
-	
+	border-radius: 30px;
+    height: 90%;
     right: 0;
-    width: 50%;
-    height: 100%;
-	background-color: white;
+    width: 35%;
+    margin: 30px;
+
+    padding-top: 100px !important;
+    padding: 10px;
+	background-color: #F2F2F7;
     display: flex;
     align-items: center;
     z-index: 1;
     transition: .6s ease-in-out, visibility 0s 1s;
+    
 }
-.container.active .form-box{
+#psn{
+    margin-top: 10px;
+}
+button{
+    background: #007AFF !important;
+    color: white !important;
+}
+.container1.active .form-box{
     right: 50%;
 }
 .form-box.login{
     z-index: 2;
+    margin-right: 120px;
 }
-.container.active .form-box.login{
+.container1.active .form-box.login{
     opacity: 0;
     z-index: 1;
+    
 }
 .form-box.regis{
     visibility: hidden;
 }
-.container.active .form-box.regis{
+.container1.active .form-box.regis{
     visibility: visible;
     z-index: 2;
+    margin-right: 120px;
 }
 .toggle-box{
     position: absolute;
@@ -69,7 +88,7 @@ body{
 
     
 }
-.container.active .toggle-box::before{
+.container1.active .toggle-box::before{
     left: 50%;
 }
 .toggle-panel{
@@ -89,7 +108,7 @@ body{
     left: 0;
     transition-delay: 1.2s;
 }
-.container.active .toggle-panel.toggle-left{
+.container1.active .toggle-panel.toggle-left{
     left: -50%;
     transition-delay: .6s;
 } 
@@ -98,50 +117,71 @@ body{
     right: -50%;
     transition-delay: .6s;
 }
-.container.active .toggle-panel.toggle-right{
+.container1.active .toggle-panel.toggle-right{
     right: 0;
     transition-delay: 1.2s;
 }
 @media screen and (max-width: 650px) {
-    .container{
-        height: calc(100vh-40px);
+    .container1 {
+        height: 100vh;
     }
-    .form-box{
+
+    .form-box {
         bottom: 0;
-        width: 100%;
+        right: 0 !important; 
+        width: 100% !important;
+        margin: 0 !important; 
         height: 70%;
+        border-radius: 30px 30px 0 0; 
+        padding-top: 5px !important;
     }
-    .container.active .form-box{
-        right: 0;
-        bottom: 30%;
+
+    .container1.active .form-box {
+        bottom: 0; 
     }
-    .toggle-box::before{
+
+    .form-box.login {
+        margin-right: 0 !important; 
+    }
+    .form-box.regis{
+        margin-top: 5px !important;
+        margin-bottom: 50% !important;
+        padding: 10px !important;
+    }
+    .toggle-box::before {
         left: 0;
         top: -270%;
         width: 100%;
         height: 300%;
+        border-radius: 10px;
     }
-    .container.active .toggle-box::before{
+
+    .container1.active .toggle-box::before {
         left: 0;
         top: 70%;
     }
-    .toggle-panel{
+
+    .toggle-panel {
         width: 100%;
         height: 30%;
     }
-    .toggle-panel.toggle-left{
+
+    .toggle-panel.toggle-left {
         top: 0;
-    }
-    .container.active .toggle-panel.toggle-left{
         left: 0;
-        top: -30%;
     }
-    .toggle-panel.toggle-panel.toggle-right{
+
+    .container1.active .toggle-panel.toggle-left {
+        top: -30%;
+        left: 0;
+    }
+
+    .toggle-panel.toggle-right {
         right: 0;
         bottom: -30%;
     }
-    .container.active .toggle-panel.toggle-right{
+
+    .container1.active .toggle-panel.toggle-right {
         bottom: 0;
     }
-}
-    
+} 

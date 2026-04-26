@@ -4,8 +4,8 @@ session_start();
 $login_message = "";
 
 if (isset($_POST['login'])) {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+    $username = $_POST['username_login'];
+    $password = $_POST['password_login'];
 
     $sql = "SELECT * FROM users WHERE username='$username'";
     $result = $db->query($sql);
@@ -24,6 +24,6 @@ if (isset($_POST['login'])) {
     }
 }
 
-include "index.html";
+include "index.html"
 ?>
 

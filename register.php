@@ -12,9 +12,11 @@ if (isset($_POST['register'])) {
         if ($db->query($sql)) {
             $register_message = "Daftar berhasil, silakan login.";
         }
-    } catch (mysqli_sql_exception) {
-        $register_message = "Username sudah ada!";
-    }
+    // Ubah ini di bagian catch:
+} catch (mysqli_sql_exception $e) {
+    // Ini akan memuntahkan error asli dari database:
+    $register_message = "Error Detail: " . $e->getMessage(); 
+}
 }
 
 include "index.html"; 
