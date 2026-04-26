@@ -24,6 +24,6 @@ if (isset($_POST['login'])) {
     }
 }
 
-include "index.html"
+include "login_reigster.html"
 ?>
 

@@ -19,7 +19,7 @@ if (isset($_POST['register'])) {
 }
 }
 
-include "index.html"; 
+include "login_reigster.html"; 
 
 
 ?>
