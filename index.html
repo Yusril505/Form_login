@@ -1,104 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Alfamart Online - belanja lebih Mudah</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-</head>
-
 <body>
-    <div class="mobile">
-        <div class="container1">
-
-            <div class="form-box regis d-flex justify-content-center text-center">
-                <div class="container d-flex justify-content-center text-center">
-                    <form action="register.php" method="post">
-                        <h1>Welcome. Silahkan buat akun</h1>
-                        <?php echo $register_message;?>
-                        <div class="form-floating">
-
-                            <input type="text" name="username" class="form-control" id="floatingInput username"
-                                placeholder="username" onkeyup="cekuser(this.value);">
-
-
-                            <label for="floatingInput">Masukkan username</label>
-
-                        </div>
-                        <div id="psn"></div>
-                        <div class="form-floating mt-3">
-
-                            <input type="password" name="password" class="form-control" id="floatingPassword password"
-                                placeholder="Password">
-
-                            <label for="floatingPassword">Buat Kata Sandi</label>
-                        </div>
-
-                        <div class="form-floating mb-3 mt-3">
-
-                            <input type="password" name="password" class="form-control" id="floatingPassword"
-                                placeholder="Password">
-
-                            <label for="floatingPassword">Konfirmasi Kata Sandi</label>
-
-                        </div>
-                        <div class="d-grid gap-2 mt-3">
-                            <button class="btn btn-primary" type="submit" name="register">Login</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-
-            <div class="form-box login ">
-                <div class="container d-flex justify-content-center text-center">
-                    <form action="login.php" method="post">
-                        <h1>Welcome back! Silahkan login</h1>
-                        <div class="form-floating mb-3">
-                            <input type="text" name="username_login" class="form-control" id="floatingInput"
-                                placeholder="username">
-                            <label for="floatingInput">Username</label>
-                        </div>
-
-                        <div class="form-floating mb-3 position-relative">
-                            <input type="password" name="password_login" class="form-control" id="floatingPassword"
-                                placeholder="Password" style="padding-right: 45px;">
-                            <label for="floatingPassword">Password</label>
-                        </div>
-                            <div class="d-grid gap-2 mt-3">
-                                <button class="btn" type="submit" name="login">Login</button>
-                            </div>
-                        
-                    </form>
-                </div>
-            </div>
-
-
-
-
-
-            <div class="toggle-box">
-
-                <div class="toggle-panel toggle-right">
-                    <h1 class="apple">Sudah punya akun?</h1>
-                    <button class="btn login-btn">Login</button>
-                </div>
-
-                <div class="toggle-panel toggle-left">
-                    <h1 class="apple">Belum punya akun?</h1>
-                    <button class="btn register-btn">Daftar</button>
-                </div>
-
-
+    <style>
+            .banner-utama {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1534723452862-4c874018d66d?q=80&w=2070');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+        }
+        .card-product:hover {
+            transform: translateY(-5px);
+            transition: 0.3s;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+    </style>
+     <!--navbar-->
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-danger" href="#">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/86/Alfamart_logo.svg" alt="Logo" width="120" class="d-inline-block align-text-top">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Promo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Kategori</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-danger text-white ms-lg-3 px-4" href="#login">Login</a>
+                    </li>
+                </ul>
             </div>
         </div>
-    </div>
-    <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-        crossorigin="anonymous"></script>
-</body>
+    </nav>
 
+    <!--jumbotron-->
+    <header class="banner-utama text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Belanja Mingguan Jadi Mudah</h1>
+            <p class="lead">Dapatkan promo menarik setiap harinya hanya di Alfamart Online.</p>
+            <a href="dashboard.php" class="btn btn-warning btn-lg fw-bold">Belanja Sekarang</a>
+        </div>
+    </header>
+<footer class="bg-dark text-white pt-5 pb-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5 class="fw-bold">Alfamart Online</h5>
+                    <p>Solusi belanja kebutuhan harian tanpa harus keluar rumah. Cepat, hemat, dan terpercaya.</p>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5 class="fw-bold">Bantuan</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50 text-decoration-none">Cara Belanja</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Pengiriman</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Hubungi Kami</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4 mb-3">
+                    <h5 class="fw-bold">Ikuti Kami</h5>
+                    <p class="text-white-50">Dapatkan info promo terbaru di media sosial kami.</p>
+                </div>
+            </div>
+            <hr class="bg-white">
+            <p class="text-center mb-0">&copy; 2024 Alfamart Digital. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script></body>
 </html>
