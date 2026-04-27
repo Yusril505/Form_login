@@ -26,4 +26,25 @@ async function cekuser(nama) {
     psn.innerHTML= nama + " " + hasil;
 }
 let eye = document.getElementById('eye');
-let pw = document.getElementById('floatingPassword'); // Sesuaikan dengan id di input Anda
+let pw = document.getElementById('pwlogin'); 
+
+eye.onclick = function(){
+    if(pw.type == "password"){
+        pw.type = "text";
+
+    } else {
+        pw.type = "password";
+
+    }
+}
+function togglePassword(inputId, tombol) {
+    const input = document.getElementById(inputId);
+    
+    if (input.type === "password") {
+        input.type = "text";
+        tombol.style.opacity = "0.5"; 
+    } else {
+        input.type = "password";
+        tombol.style.opacity = "1";
+    }
+}

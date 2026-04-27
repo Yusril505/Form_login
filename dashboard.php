@@ -5,6 +5,12 @@ if (!isset($_SESSION['is_login'])) {
     header("location: main.php");
 }
 ?>
+<?php
+session_start();
+if (!isset($_SESSION['is_login'])) {
+    header("location: login.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,7 +49,11 @@ if (!isset($_SESSION['is_login'])) {
                     <li class="nav-item"><a class="nav-link active" href="#">Beranda</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Promo</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">Kategori</a></li>
+<<<<<<< HEAD
                     <li class="nav-item"><a class="nav-link text-danger" href="logout.php">Logout</a></li>
+=======
+                    <li class="nav-item"><a class="nav-link text-danger" href="login.php">Logout</a></li>
+>>>>>>> f1cddefb89e5a51b4fd307508a3e38cc304a96f0
                 </ul>
             </div>
         </div>
@@ -144,6 +154,10 @@ if (!isset($_SESSION['is_login'])) {
         </div>
     </footer>
 
+<<<<<<< HEAD
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+=======
+    <script src="bootstrap-5.3.8-dist/js/bootstrap.min.js"></script>
+>>>>>>> f1cddefb89e5a51b4fd307508a3e38cc304a96f0
 </body>
 </html>
